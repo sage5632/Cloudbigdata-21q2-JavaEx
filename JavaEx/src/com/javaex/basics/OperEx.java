@@ -27,7 +27,7 @@ public class OperEx {
 		// 그 이하면 Fail
 		message = score >= 80 ? "Good": score >=50 ? "Pass" :"Fail";
 		System.out.println("점수" + score +  " 결과 :" +message);
-		
+		 
 	}
 	// 비트 시프트 연산자
 	// 비트 단위 이동
