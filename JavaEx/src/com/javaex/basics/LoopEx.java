@@ -13,20 +13,31 @@ public class LoopEx {
 		//randomEx();
 		//whilegugu();
 		//forgugu();
-		forstarEx();
-
+		//forstarEx();
+		whilestarEx();
+		
+	}
+	private static void whilestarEx() {
+		int i = 0;
+		while (i < 6) {
+			i++;
+		int j = 0;
+		
+		while (j < i) {
+			j++;
+			System.out.print("*");
+		
+		}
+		System.out.println();
+		}
 	}
 	private static void forstarEx() {
-		int i = 1;
-		while (i <=6) {
-			i++;
-			int j = 1;
-			
-			while (j <6) {
-				j++;
-				System.out.println("*");
+		int i, j;
+		for (i = 1; i <=6; i++) {
+			for (j= 1; j <=i; j++) {
+				System.out.print("*");
 			}
-			System.out.println(); 
+			System.out.println();
 			}
 		}
 	private static void whilegugu() {
