@@ -11,13 +11,42 @@ public class LoopEx {
 		//continueEx();
 		//breakEx();
 		//randomEx();
-		whilegugu();
+		//whilegugu();
+		//forgugu();
+		forstarEx();
 
 	}
-	private static void whilegugu() {
+	private static void forstarEx() {
 		int i = 1;
-		while (i <=9) {
-			System.out.println()
+		while (i <=6) {
+			i++;
+			int j = 1;
+			
+			while (j <6) {
+				j++;
+				System.out.println("*");
+			}
+			System.out.println(); 
+			}
+		}
+	private static void whilegugu() {
+		int dan = 1;
+		while (dan <9) {
+		dan++;
+		int num = 0;
+		
+		while (num <9) {
+			num++;
+			System.out.println(dan + "*" + num + "=" + (num * dan));
+			
+		}
+		}
+	}
+	private static void forgugu() {
+	for (int dan = 2; dan <= 9; dan++) {
+		for (int num = 1; num <= 9; num++) {
+			System.out.println(dan + "*" + num +"=" + (num * dan));
+		}
 		}
 	}
 	private static void randomEx() {
