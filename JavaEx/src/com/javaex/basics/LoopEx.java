@@ -10,8 +10,15 @@ public class LoopEx {
 		//forLoopEx();
 		//continueEx();
 		//breakEx();
-		randomEx();
+		//randomEx();
+		whilegugu();
 
+	}
+	private static void whilegugu() {
+		int i = 1;
+		while (i <=9) {
+			System.out.println()
+		}
 	}
 	private static void randomEx() {
 		// 1 ~ 45 까지의 난수 6개 출력
