@@ -19,15 +19,16 @@ public class Problem01 {
 		int count = 0;
 		
 		for (int i = 0; i < data.length; i++) {
-			if(data[i]  % 3 == 0);
+			if(data[i] % 3 == 0) {
 			sum += data[i];
 			count++;
 			
 		}
+		
+	}
 		System.out.println("주어진 배열에서 3의 배수의 합 =>" + sum);
 		System.out.println("주어진 배열에서 3의 배수의 개수 =>" + count );
 	}
-
 	private static void problem2() {
 		Scanner scanner = new Scanner(System.in);
 		int[] num = new int[5];
