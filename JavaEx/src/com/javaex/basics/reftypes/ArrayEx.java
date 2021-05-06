@@ -9,7 +9,7 @@ public class ArrayEx {
 		//arrayCopySystem();
 	}
 	private static void arrayCopySystem() {
-		// System 객체를 이용한 배열의 복사
+		// System 객체를 이 용한 배열의 복사
 		int source[] = { 1,2,3 };
 		int target[] = new int[10];
 		
