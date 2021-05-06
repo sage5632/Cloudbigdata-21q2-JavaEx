@@ -25,5 +25,10 @@ public class StaticEx {
 	
 	// 소멸자 : 객체가 해제될 때 호출
 	@Override
-	protected 
+	protected void finalize() throws Throwable {
+		// 참조 카운트 줄이기
+		refCount--;
+		super.finalize();
+		System.out.println("소멸자 호출");
+	}
 }
