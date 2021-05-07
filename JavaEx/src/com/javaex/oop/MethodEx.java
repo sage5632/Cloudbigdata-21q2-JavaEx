@@ -15,13 +15,13 @@ public class MethodEx {
 		}));
 		
 		System.out.println(getSum(1,2,3,4,5,6,7,8,9,10));
-		printSum("합계 :", 1,2,3,4,5,6,7,8,9,);
+		printSum("합계 :",  1,2,3,4,5,6,7,8,9);
 		}
 	
 	// 고정 인수, 가변 인수 같이 쓸 수 있다
 	// 제약 : 고정 인수를 먼저 선언, 뒤에 가변인수 선언
 	// 가변인수 : ... -> 배열로 변환되어 전달
-	private static void printSum(STring mesage, double ...values) {
+	private static void printSum(String message, double ...values) {
 		System.out.println(message + ", " + getSum(values));
 		
 	}

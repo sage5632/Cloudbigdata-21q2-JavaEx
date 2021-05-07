@@ -17,7 +17,7 @@ public class ColorPoint extends Point {
 		//System.out.printf("색상점[x=%d, y=%d, color=%s]을 그렸습니다.%n",  x,y,color);
 		
 		//방법 2 : 부모의 필드접근 제한자를 protect로 변경
-		System.out.printf("색상점[x=%d, y=%d, color%s]을 그렸습니다", x,y,color);, null)
+		System.out.printf("색상점[x=%d, y=%d, color%s]을 그렸습니다", x,y,color);
 	}
 	@Override
 	public void draw(boolean show) {
