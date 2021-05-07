@@ -56,6 +56,8 @@ public class ArrayEx {
 				{ 4,5,6,7,8,9,0,1,2,3},
 				{ 5,6,7,8,9,0,1,2,3,4}
 		}; // 배열의 배열
+		
+		int total = 0;
 		System.out.println("table 배열의 행수:" + table.length);
 		for(int row = 0; row < table.length; row++) {
 			for (int col = 0; col < table[row].length; col++) {
