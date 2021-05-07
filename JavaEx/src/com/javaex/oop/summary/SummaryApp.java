@@ -4,7 +4,7 @@ public class SummaryApp {
 	static KungfuSkill dojang[];
 	public static void main(String[] args) {
 		Human h1 = new Human("고길동", 50);
-		Human h2 = new Human("네오", 48);
+		Human h2 = new TheOne("네오", 48);
 		Panda p1 = new Panda("핑", 30);
 		Panda p2 = new KungfuPanda("포",15);
 		
