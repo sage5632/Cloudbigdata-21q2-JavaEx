@@ -3,16 +3,17 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 public class DateEx {
 
 	public static void main(String[] args) {
 //		dateEx();
-		calendarEx();
+		CalendarEx();
 
 	}
 	
 	
-	private static void calendarEx() {
+	private static void CalendarEx() {
 		// 캘린더 불러오기
 		Calendar now = Calendar.getInstance();
 //		System.out.println("NOW:" + now);
@@ -24,7 +25,7 @@ public class DateEx {
 		
 		Calendar future = Calendar.getInstance();
 		future.add(Calendar.DATE, 100);
-		System.out.printf("100일 후 Future : %년 %월 %일\n",
+		System.out.printf("100일 후 Future : %d년 %d월 %d일%n",
 				future.get(Calendar.YEAR),
 				future.get(Calendar.MONTH) + 1,
 				future.get(Calendar.DATE));
@@ -34,6 +35,7 @@ public class DateEx {
 		System.out.println("100일 후 요일:" + dow);
 		
 		String dowStr = "?";
+		switch(dow) {
 		case Calendar.SUNDAY:
 			dowStr = "일요일";
 			break;
@@ -56,7 +58,7 @@ public class DateEx {
 			dowStr = "토요일";
 	}
 	// 요일 정보 : SUNDAY(1) ~ SATURDAY (7)
-		System.out.println(dowStr;)
+		System.out.println(dowStr);
 	}
 	private static void dateEx() {
 		// 날짜 얻어오기
