@@ -10,11 +10,11 @@ public class ArrayClassEx {
 	//	copyArrayEx();
 	//	sortEx();
 	//	sortCustomEx();
-		searchEx();
+		searchEx1();
 	}
 	
 	// 배열 내 검색
-	private static void searchEx() {
+	private static void searchEx1() {
 		Integer num2[] = { 5, 6, 3, 2, 4, 1, 7, 9, 8, 10 };
 		// 자바는 기본적으로 이진 검색
 		// 이진 검색은 검색 이진에 먼저 배열이 정렬되어 있어야 한다
