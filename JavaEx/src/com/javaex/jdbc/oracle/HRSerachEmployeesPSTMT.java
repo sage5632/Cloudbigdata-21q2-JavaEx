@@ -3,6 +3,8 @@ package com.javaex.jdbc.oracle;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -45,13 +47,15 @@ public class HRSerachEmployeesPSTMT {
 			while(rs.next()) {
 				String firstName = rs.getString(1);
 				String lastName = rs.getString(2);
-				String email = rs.getString("eamil");
+				String email = rs.getString("email");
 				String phoneNumber = rs.getString("phone_number");
-				String hireDate = rs.getString("hire_date"); // java.util.Date
+				String hireDate = rs.getString("hire_date");
 				
 				// 출력
-				System.out.printf("%s %s: %s, %s, %s%n", firstName,lastName, email, phoneNumber, hireDate);
+				System.out.printf("%s %s: %s, %s, %s%n", 
+							firstName,lastName, email, phoneNumber, hireDate);
 			}
+			scanner.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			} finally {
