@@ -6,7 +6,7 @@ public class DBConfig {
 	public static String DBUSER = "hr";
 	public static String DBPASS = "hr";
 	
-	Connection getConnection() throws SQLException {
+	static Connection getConnection() throws SQLException {
 		Connection conn = null;
 		
 		try {
