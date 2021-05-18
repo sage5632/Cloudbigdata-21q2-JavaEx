@@ -24,11 +24,12 @@ public class AuthorVO {
 	public AuthorVO(Long id, String authorName,
 			String authorDesc) {
 		this(id, authorName);
-		if (authorDesc == null) {
+		/*if (authorDesc == null) {
 			this.authorDesc ="";
 		} else {
 		this.authorDesc = authorDesc;
-	}
+	}*/
+		this.authorDesc = authorDesc == null ? "": authorDesc;
 }
 
 	public Long getId() {
