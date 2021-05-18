@@ -1,8 +1,13 @@
 package com.javaex.jdbc.oracle.dao;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.*;
 public class AuthorDAOImpl implements AuthorDAO {
 	// 공통 접속
 	private Connection getConnection() throws SQLException {
@@ -107,14 +112,55 @@ public class AuthorDAOImpl implements AuthorDAO {
 
 	@Override
 	public boolean delete(Long id) {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int deletedCount = 0;
+		
+		try {
+			conn = getConnection();
+			String sql = "DELETE FROM author WHERE author_id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, id);
+			
+			deletedCount = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (Exception e) {
+		}
+		return 1 == deletedCount;
 	}
 
 	@Override
 	public boolean update(AuthorVO vo) {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int updatedCount = 0;
+		
+		try {
+			conn = getConnection();
+			// 실행 계획
+			String sql = "UPDATE author SET author_id=?, author_desc=? WHERE author_id=?";
+			pstmt = conn.prepareStatement(sql);
+			// 파라미터 바인딩
+			pstmt.setString(1,  vo.getAuthorName());
+			pstmt.setLong(2,  vo.getId());
+			
+			updatedCount = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (Exception e) {
+		}
+		}
+	
+		return 1 == updatedCount;
 	}
 
 }
